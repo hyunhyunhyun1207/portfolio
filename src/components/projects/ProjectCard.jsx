@@ -234,12 +234,14 @@ const SecondaryLink = styled(LinkBase)`
 `;
 
 const FeaturedMedia = styled.div`
-  min-height: 260px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 26px;
 `;
 
 const VideoBox = styled.video`
   width: 100%;
-  min-height: 260px;
+  height: 100%;
   border-radius: 26px;
   border: 1px solid #d9e6f5;
   background: #000;

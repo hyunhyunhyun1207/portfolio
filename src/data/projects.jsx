@@ -2,6 +2,19 @@ const BASE_URL = import.meta.env.BASE_URL;
 
 export const projects = [
   {
+    title: "Dynamic Pricing System",
+    subtitle: "실시간 가격·재고 최적화 자동화",
+    description:
+      "수요·경쟁가·재고 데이터를 실시간으로 분석해 최적 판매가를 자동 산출하고, 재고 소진 예측 기반의 발주 자동화까지 연결한 풀스택 다이내믹 프라이싱 시스템입니다.",
+    tech: ["React", "Python", "FastAPI", "MySQL", "Styled-components", "Recharts"],
+    type: "featured",
+    status: "대표 프로젝트",
+    mediaLabel: "프로젝트 발표 자료",
+    githubUrl: "https://github.com/team1-final-project/frontend",
+    pdfUrl: `${BASE_URL}files/실시간 다이내믹 프라이싱 및 재고 최적화 자동화 시스템.pdf`,
+    videoUrl: `${BASE_URL}files/Stock+er.mp4`,
+  },
+  {
     title: "MES for Battery Manufacturing",
     subtitle: "스마트팩토리형 제조 실행 시스템",
     description:
