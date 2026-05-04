@@ -16,6 +16,8 @@ export default function StackSection() {
           <CardTitle>Frontend</CardTitle>
           <CardDesc>화면 구성, 인터랙션, UI 설계 중심</CardDesc>
           <TechList>
+            <TechChip>Html</TechChip>
+            <TechChip>JS6</TechChip>
             <TechChip>React</TechChip>
             <TechChip>Vite</TechChip>
             <TechChip>Styled-components</TechChip>
@@ -27,6 +29,8 @@ export default function StackSection() {
           <CardTitle>Backend</CardTitle>
           <CardDesc>비즈니스 로직, 인증, 데이터 처리 중심</CardDesc>
           <TechList>
+            <TechChip>Java</TechChip>
+            <TechChip>Python</TechChip>
             <TechChip>Spring Boot</TechChip>
             <TechChip>JPA</TechChip>
             <TechChip>JWT</TechChip>
@@ -39,6 +43,7 @@ export default function StackSection() {
           <CardDesc>데이터 구조, 저장, 시스템 연결 영역</CardDesc>
           <TechList>
             <TechChip>Oracle</TechChip>
+            <TechChip>MySQL</TechChip>
             <TechChip>ERD Modeling</TechChip>
             <TechChip>REST API</TechChip>
             <TechChip>GitHub</TechChip>

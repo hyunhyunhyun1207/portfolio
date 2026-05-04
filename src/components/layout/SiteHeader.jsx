@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Github, Layers3 } from "lucide-react";
+import { Github } from "lucide-react";
 import { siteConfig } from "../../data/siteConfig";
 
 export default function SiteHeader() {
   return (
     <Header>
       <Inner>
+        <SiteName href="#">{siteConfig.portfolioTitle}</SiteName>
+
         <RightArea>
           <Nav>
             <NavLink href="#about">About</NavLink>
@@ -34,20 +36,29 @@ const Header = styled.header`
   z-index: 30;
   margin-bottom: 40px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 `;
 
 const Inner = styled.div`
   display: inline-flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 16px;
+  justify-content: space-between;
+  gap: 24px;
   padding: 12px 16px;
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(20px);
   box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+  width: min(860px, calc(100% - 48px));
+`;
+
+const SiteName = styled.a`
+  padding: 4px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
 `;
 
 const RightArea = styled.div`
@@ -55,22 +66,25 @@ const RightArea = styled.div`
   align-items: center;
   gap: 12px;
 
-  @media (max-width: 900px) {
-    flex-wrap: wrap;
-    justify-content: flex-end;
+  @media (max-width: 600px) {
+    gap: 6px;
   }
 `;
 
 const Nav = styled.nav`
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const NavLink = styled.a`
   padding: 10px 14px;
   border-radius: 999px;
   color: var(--text-soft);
+  font-size: 14px;
   transition:
     background 0.2s ease,
     color 0.2s ease;
@@ -85,11 +99,13 @@ const GithubLink = styled.a`
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 16px;
+  padding: 10px 16px;
   border-radius: 999px;
   border: 1px solid #e2e8f0;
   background: rgba(255, 255, 255, 0.82);
   color: var(--text);
+  font-size: 14px;
+  white-space: nowrap;
   transition: all 0.2s ease;
 
   &:hover {

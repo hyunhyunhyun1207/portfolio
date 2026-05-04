@@ -36,15 +36,9 @@ export default function AboutSection() {
 }
 
 const Section = styled.section`
-  display: flex;
-  gap: 24px;
   margin-top: 80px;
   padding: 20px 0 40px;
   scroll-margin-top: 100px;
-
-  @media (max-width: 1100px) {
-    grid-template-columns: 1fr;
-  }
 `;
 
 const CardBase = styled.div`

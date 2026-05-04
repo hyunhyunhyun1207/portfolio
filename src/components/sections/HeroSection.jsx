@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import { siteConfig } from "../../data/siteConfig";
 
 export default function HeroSection() {
@@ -16,9 +16,25 @@ export default function HeroSection() {
           <Headline>
             <Accent>Idea to Flow</Accent>
             <br />
-            개인 포트폴리오 SPA
+            {siteConfig.name}의 Portfolio
           </Headline>
+          <Bio>{siteConfig.bio}</Bio>
         </TextGroup>
+
+        <ButtonRow>
+          <PrimaryButton
+            href={siteConfig.githubUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Github size={16} />
+            GitHub
+          </PrimaryButton>
+          <SecondaryButton href={`mailto:${siteConfig.email}`}>
+            <Mail size={16} />
+            Contact
+          </SecondaryButton>
+        </ButtonRow>
       </Left>
     </Section>
   );
@@ -34,38 +50,18 @@ const Section = styled.section`
 const Left = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  gap: 24px;
-`;
-
-const Badge = styled.div`
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  width: fit-content;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid #bae6fd;
-  background: #ecfeff;
-  color: #0e7490;
-  font-size: 14px;
-`;
-
-const Dot = styled.span`
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: #06b6d4;
+  gap: 32px;
 `;
 
 const TextGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   align-items: center;
   text-align: center;
 `;
 
-const Headline = styled.h2`
+const Headline = styled.h1`
   margin: 0;
   font-size: clamp(42px, 7vw, 72px);
   line-height: 1.08;
@@ -82,31 +78,41 @@ const Accent = styled.span`
   color: #0891b2;
 `;
 
-const Description = styled.p`
+const Bio = styled.p`
   margin: 0;
-  max-width: 775px;
   font-size: 18px;
-  line-height: 1.8;
   color: var(--text-soft);
+  line-height: 1.7;
 `;
 
 const ButtonRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
 `;
 
-const BaseButton = styled.button`
+const LinkBase = styled.a`
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 14px 24px;
   border-radius: 999px;
+  font-size: 15px;
   cursor: pointer;
   transition: all 0.2s ease;
 `;
 
-const SecondaryButton = styled(BaseButton)`
+const PrimaryButton = styled(LinkBase)`
+  background: #0f172a;
+  color: #fff;
+
+  &:hover {
+    background: #1e293b;
+  }
+`;
+
+const SecondaryButton = styled(LinkBase)`
   border: 1px solid #e2e8f0;
   background: rgba(255, 255, 255, 0.82);
   color: var(--text);
@@ -114,31 +120,4 @@ const SecondaryButton = styled(BaseButton)`
   &:hover {
     background: #f8fafc;
   }
-`;
-
-const StatGrid = styled.div`
-  display: grid;
-  grid-template-columns: minmax(0, 220px);
-  gap: 12px;
-`;
-
-const StatCard = styled.div`
-  padding: 20px;
-  border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.82);
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
-`;
-
-const StatLabel = styled.p`
-  margin: 0;
-  font-size: 14px;
-  color: #64748b;
-`;
-
-const StatValue = styled.p`
-  margin: 10px 0 0;
-  font-size: 22px;
-  font-weight: 600;
 `;
