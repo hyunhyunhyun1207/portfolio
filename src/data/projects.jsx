@@ -12,7 +12,7 @@ export const projects = [
     mediaLabel: "프로젝트 발표 자료",
     githubUrl: "https://github.com/team1-final-project/frontend",
     pdfUrl: `${BASE_URL}files/실시간 다이내믹 프라이싱 및 재고 최적화 자동화 시스템.pdf`,
-    videoUrl: `${BASE_URL}files/Stock+er.mp4`,
+    videoUrl: `${BASE_URL}files/Stock%2Ber.mp4`,
   },
   {
     title: "MES for Battery Manufacturing",
