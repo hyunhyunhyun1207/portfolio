@@ -7,8 +7,8 @@ export default function IntroOverlay({ onComplete }) {
   const [showBio, setShowBio] = useState(false);
 
   useEffect(() => {
-    const bioTimer = setTimeout(() => setShowBio(true), 2000);
-    const doneTimer = setTimeout(onComplete, 4500);
+    const bioTimer = setTimeout(() => setShowBio(true), 1400);
+    const doneTimer = setTimeout(onComplete, 3200);
     return () => {
       clearTimeout(bioTimer);
       clearTimeout(doneTimer);

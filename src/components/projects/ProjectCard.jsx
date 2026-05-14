@@ -121,8 +121,7 @@ const Card = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: ${({ featured }) =>
-    featured ? "1.05fr 0.95fr" : "0.95fr 1.05fr"};
+  grid-template-columns: 1.05fr 0.95fr;
 
   @media (max-width: 1100px) {
     grid-template-columns: 1fr;
@@ -131,6 +130,8 @@ const Grid = styled.div`
 
 const Left = styled.div`
   padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Right = styled.div`
@@ -202,7 +203,8 @@ const ButtonRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 32px;
+  margin-top: auto;
+  padding-top: 32px;
 `;
 
 const LinkBase = styled.a`
@@ -298,7 +300,7 @@ const SnapshotLabel = styled.p`
 
 const PdfFrame = styled.iframe`
   width: 100%;
-  height: 320px;
+  height: 270px;
   margin-top: 16px;
   border: 1px solid #dbe4f0;
   border-radius: 20px;

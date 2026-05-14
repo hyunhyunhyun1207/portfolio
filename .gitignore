@@ -15,6 +15,10 @@ dist-ssr
 # Claude Code
 .claude/
 
+# Private assets
+public/files/
+public/이현수 이력서 사진.png
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

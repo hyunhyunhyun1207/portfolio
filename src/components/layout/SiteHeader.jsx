@@ -12,8 +12,8 @@ export default function SiteHeader() {
         <RightArea>
           <Nav>
             <NavLink href="#about">About</NavLink>
-            <NavLink href="#projects">Projects</NavLink>
             <NavLink href="#stack">Stack</NavLink>
+            <NavLink href="#projects">Projects</NavLink>
           </Nav>
 
           <GithubLink

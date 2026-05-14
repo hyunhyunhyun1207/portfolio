@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion";
 import GlobalStyle from "./styles/GlobalStyle.jsx";
@@ -10,10 +10,15 @@ import AboutSection from "./components/sections/AboutSection";
 import ProjectsSection from "./components/sections/ProjectsSection";
 import StackSection from "./components/sections/StackSection";
 import FooterSection from "./components/sections/FooterSection";
+import SectionReveal from "./components/common/SectionReveal";
 
 export default function App() {
   const [introVisible, setIntroVisible] = useState(true);
   const handleIntroComplete = useCallback(() => setIntroVisible(false), []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -28,10 +33,10 @@ export default function App() {
         <Container>
           <SiteHeader />
           <HeroSection />
-          <AboutSection />
-          <ProjectsSection />
-          <StackSection />
-          <FooterSection />
+          <SectionReveal><AboutSection /></SectionReveal>
+          <SectionReveal><StackSection /></SectionReveal>
+          <SectionReveal><ProjectsSection /></SectionReveal>
+          <SectionReveal><FooterSection /></SectionReveal>
         </Container>
       </AppShell>
     </>

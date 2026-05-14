@@ -16,9 +16,10 @@ export default function HeroSection() {
           <Headline>
             <Accent>Idea to Flow</Accent>
             <br />
-            {siteConfig.name}의 Portfolio
+            Portfolio
           </Headline>
           <Bio>{siteConfig.bio}</Bio>
+          <Tagline>{siteConfig.tagline}</Tagline>
         </TextGroup>
 
         <ButtonRow>
@@ -41,9 +42,12 @@ export default function HeroSection() {
 }
 
 const Section = styled.section`
-  display: block;
-  margin-top: 150px;
-  margin-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100svh - 120px);
+  margin-bottom: 40px;
+  padding-bottom: 10%;
   scroll-margin-top: 100px;
 `;
 
@@ -63,7 +67,7 @@ const TextGroup = styled.div`
 
 const Headline = styled.h1`
   margin: 0;
-  font-size: clamp(42px, 7vw, 72px);
+  font-size: clamp(52px, 9vw, 96px);
   line-height: 1.08;
   letter-spacing: -0.04em;
 
@@ -80,9 +84,17 @@ const Accent = styled.span`
 
 const Bio = styled.p`
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--text-soft);
   line-height: 1.7;
+`;
+
+const Tagline = styled.p`
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  white-space: nowrap;
 `;
 
 const ButtonRow = styled.div`

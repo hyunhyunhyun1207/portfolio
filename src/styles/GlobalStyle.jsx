@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
-  }
+}
 
   body {
     margin: 0;
