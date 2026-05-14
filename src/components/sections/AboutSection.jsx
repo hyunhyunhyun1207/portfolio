@@ -57,17 +57,36 @@ export default function AboutSection() {
               {siteConfig.githubUrl.replace("https://", "")}
             </ContactItem>
           </ContactList>
+
+          <HorizontalDivider />
+
+          <KeywordLabel>Keywords</KeywordLabel>
+          <KeywordList>
+            {["데이터 흐름 이해", "사용자 중심 UI", "API 기반 화면 구현"].map((kw) => (
+              <Keyword key={kw}>{kw}</Keyword>
+            ))}
+          </KeywordList>
         </ProfileInfo>
 
         <VerticalDivider />
 
         <KeywordSection>
-          <KeywordLabel>Keywords</KeywordLabel>
-          <KeywordList>
-            {["데이터 흐름 이해", "사용자 중심 UI", "실행력", "API 기반 화면 구현"].map((kw) => (
-              <Keyword key={kw}>{kw}</Keyword>
-            ))}
-          </KeywordList>
+          <KeywordLabel>Education</KeywordLabel>
+          <InfoItem>
+            <InfoTitle>백석대학교</InfoTitle>
+            <InfoSub>사회복지학 전공 · 2018 – 2021 · 자퇴</InfoSub>
+          </InfoItem>
+
+          <HorizontalDivider />
+
+          <KeywordLabel>Certifications</KeywordLabel>
+          <InfoItem>
+            <InfoTitle>SQLD</InfoTitle>
+            <InfoSub>SQL 개발자</InfoSub>
+          </InfoItem>
+          <InfoItem>
+            <InfoTitle>2종보통면허</InfoTitle>
+          </InfoItem>
         </KeywordSection>
       </ProfileCard>
       <Grid>
@@ -91,9 +110,9 @@ const Section = styled.section`
 
 const ProfileCard = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
-  padding: 36px;
+  padding: 48px;
   margin-bottom: 32px;
   max-width: 1080px;
   margin-left: auto;
@@ -124,7 +143,7 @@ const ProfileImg = styled.img`
 const ProfileInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
 `;
 
 const ProfileName = styled.h2`
@@ -167,7 +186,7 @@ const VerticalDivider = styled.div`
 const KeywordSection = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   min-width: 200px;
 `;
 
@@ -193,6 +212,29 @@ const Keyword = styled.span`
   color: #334155;
   font-size: 13px;
   font-weight: 500;
+`;
+
+const HorizontalDivider = styled.hr`
+  border: none;
+  border-top: 1px solid var(--line-soft);
+  margin: 4px 0;
+`;
+
+const InfoItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+`;
+
+const InfoTitle = styled.span`
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+`;
+
+const InfoSub = styled.span`
+  font-size: 13px;
+  color: var(--text-muted);
 `;
 
 const CopiedText = styled.span`
