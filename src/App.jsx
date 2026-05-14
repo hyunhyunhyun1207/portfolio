@@ -9,7 +9,6 @@ import HeroSection from "./components/sections/HeroSection";
 import AboutSection from "./components/sections/AboutSection";
 import ProjectsSection from "./components/sections/ProjectsSection";
 import StackSection from "./components/sections/StackSection";
-import FooterSection from "./components/sections/FooterSection";
 import SectionReveal from "./components/common/SectionReveal";
 
 export default function App() {
@@ -36,7 +35,6 @@ export default function App() {
           <SectionReveal><AboutSection /></SectionReveal>
           <SectionReveal><StackSection /></SectionReveal>
           <SectionReveal><ProjectsSection /></SectionReveal>
-          <SectionReveal><FooterSection /></SectionReveal>
         </Container>
       </AppShell>
     </>
@@ -54,7 +52,7 @@ const Container = styled.div`
   position: relative;
   width: min(var(--max-width), calc(100% - 48px));
   margin: 0 auto;
-  padding: 32px 0;
+  padding: 32px 0 120px;
 
   @media (max-width: 768px) {
     width: min(var(--max-width), calc(100% - 32px));

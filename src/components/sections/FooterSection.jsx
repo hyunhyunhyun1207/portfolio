@@ -30,7 +30,7 @@ export default function FooterSection() {
         </LinkRow>
 
         <Divider />
-        <Copy>© {new Date().getFullYear()} {siteConfig.name}. Built with React + Vite.</Copy>
+       
       </Inner>
     </Footer>
   );
@@ -38,7 +38,7 @@ export default function FooterSection() {
 
 const Footer = styled.footer`
   margin-top: 120px;
-  padding: 64px 0 48px;
+  padding: 64px 0;
   border-top: 1px solid var(--line-soft);
 `;
 
