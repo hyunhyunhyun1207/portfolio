@@ -18,7 +18,7 @@ export const projects = [
     status: "대표 프로젝트",
     mediaLabel: "프로젝트 시연 영상",
     githubUrl: "https://github.com/mes-team-2",
-    pdfUrl: `${BASE_URL}files/(최종 발표) 2조 Z-zone Battery.pdf`,
+    pdfUrl: `${BASE_URL}files/2조 Z-zone Battery.pdf`,
     videoUrl: `${BASE_URL}files/new_2조.mp4`,
   },
   {
